@@ -1,0 +1,20 @@
+{
+  "name": "product",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "bcrypt": "^5.1.0",
+    "generate-password": "^1.7.0",
+    "jsonwebtoken": "^9.0.1",
+    "typescript": "^5.1.6",
+    "uuid": "^9.0.0"
+  }
+}
