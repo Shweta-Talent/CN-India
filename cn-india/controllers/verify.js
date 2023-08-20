@@ -20,7 +20,7 @@ exports.verify = async (req, res) => {
     });
 
     await user.updateOne({ admin_setPassword: admin_setPassword });
-    // console.log(admin_setPassword)
+
     await user.updateOne({ forcePasswordReset: true });
     await user.updateOne({ verifiedStatus: true });
     await verifymail(emailId, user.firstName, admin_setPassword);

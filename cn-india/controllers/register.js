@@ -1,7 +1,6 @@
-const express = require("express");
 const User = require("../models/user");
 const bcrypt = require("bcrypt");
-var jwt = require("jsonwebtoken");
+const jwt = require("jsonwebtoken");
 const { welcome } = require("../utils/emailer");
 const { v4: uuidv4 } = require("uuid");
 
@@ -35,9 +34,9 @@ exports.Register = async (req, res) => {
 
     const result = await User.findOne({ emailId });
     if (result) throw Error("user exist");
-   
+
     const user = new User({
-      userId:uuidv4(),
+      userId: uuidv4(),
       firstName: firstName,
       lastName: lastName,
       emailId: emailId,
@@ -48,8 +47,8 @@ exports.Register = async (req, res) => {
       password: password,
       userType: userType,
     });
-    const hashedPassword =  bcrypt.hashSync(password,10);
-    console.log(user.passwordHash);
+    const hashedPassword = bcrypt.hashSync(password, 10);
+
     user.passwordHash = hashedPassword;
     const data = await user.save();
 
@@ -84,18 +83,16 @@ exports.login = async (req, res) => {
       return res.send({ status: 400, message: "verify your account" });
     if (user.forcePasswordReset == false)
       return res.send({ status: 400, message: "reset your password" });
-      console.log(user.userId);
+    console.log(user.userId);
     const token = jwt.sign(
       {
         exp: Math.floor(Date.now) / 1000 + 60 * 60,
         userType: user.userType,
         emailId,
-        useId : user.userId
+        useId: user.userId,
       },
-      "mysecretkey"
+      process.env.SECRETKEY
     );
-    // res.send({ token });
-    console.log(token)
 
     return res.send({ status: "success", message: "login successfull" });
   } catch (error) {

@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const Gender= new Schema({
+const Gender = new Schema({
   genderId: {
     type: String,
     required: true,

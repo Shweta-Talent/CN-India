@@ -8,7 +8,6 @@ const Role = new Schema({
   },
   projectId: {
     type: String,
-
   },
   roleName: {
     type: String,
@@ -19,7 +18,6 @@ const Role = new Schema({
   },
   roleType: {
     type: String,
-   
   },
   intendToPublishRole: {
     type: Boolean,
@@ -31,7 +29,6 @@ const Role = new Schema({
   },
   roleLocation: {
     type: String,
-   
   },
   payingRole: {
     type: Boolean,
@@ -56,15 +53,12 @@ const Role = new Schema({
   },
   allowedGenders: {
     type: String,
-   
   },
   roleEthnicAppearanceSpecified: {
     type: Boolean,
-   
   },
   ethnicityIds: {
     type: String,
-    
   },
   roleEthnicity: {
     type: String,
@@ -77,7 +71,6 @@ const Role = new Schema({
   },
   recommendedSkills: {
     type: String,
-   
   },
   slidesUrl: {
     type: String,
@@ -96,7 +89,6 @@ const Role = new Schema({
   },
   auditionLocation: {
     type: String,
-    
   },
   fromDate: {
     type: Date,
@@ -119,7 +111,6 @@ const Role = new Schema({
   },
   workLocation: {
     type: String,
-  
   },
   workFromDate: {
     type: Date,

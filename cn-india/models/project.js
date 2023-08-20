@@ -4,11 +4,10 @@ const Project = new Schema({
   projectId: {
     type: String,
     required: true,
-    unique:true
+    unique: true,
   },
   createdBy: {
     type: String,
-    
   },
   projectName: {
     type: String,
@@ -20,18 +19,15 @@ const Project = new Schema({
   },
   projectType: {
     type: String,
- 
   },
   union: {
     type: String,
-    
   },
   projectDescription: {
     type: String,
   },
   projectLocation: {
     type: String,
-    
   },
   releaseToTalent: {
     type: Boolean,
@@ -106,7 +102,5 @@ const Project = new Schema({
   lastModifiedAt: {
     type: Date,
   },
-  
-
 });
 module.exports = mongoose.model("Project", Project);

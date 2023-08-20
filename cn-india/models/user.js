@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const User = new Schema({
   userId: {
     type: String,
-    required:true
+    required: true,
   },
   firstName: {
     type: String,
@@ -60,10 +60,10 @@ const User = new Schema({
     type: Number,
   },
   status: {
-    Enum: ["blocked", "active", "inactive"],
+    enum: ["blocked", "active", "inactive"],
   },
   location: {
-    Enum: ["chennai", "banglore"],
+    enum: ["chennai", "banglore"],
   },
   updateOffer: {
     type: Boolean,
