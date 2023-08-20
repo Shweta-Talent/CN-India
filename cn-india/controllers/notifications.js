@@ -49,7 +49,7 @@ if(notifyuser==null){
         );
         };
       
-        cron.schedule("* * * * *", () => {
+        cron.schedule("0 0 1 * *", () => {
           sendReminder()
             .then(() => {
               console.log("Reminder email sent and resolved.");
