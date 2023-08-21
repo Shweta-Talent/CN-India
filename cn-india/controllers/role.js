@@ -1,0 +1,45 @@
+const express = require("express");
+const Role = require("../models/role");
+
+exports.Role = async (req, res) => {
+  const {
+    body: {
+      roleName,
+      internalRoleName,
+      intendToPublishRole,
+      releaseRoleToBillbord,
+      roleLocation,
+      payingRole,
+      roleAgeInYear,
+      roleAgeFrom,
+      roleAgeTo,
+      roleGenderSpecified,
+      allowedGenders,
+      roleEthnicAppearanceSpecified,
+      roleEthnicity,
+      noOfTalent,
+      roleDescription,
+      recommendedSkills,
+      slidesUrl,
+      involveSexualSituations,
+      involveNudity,
+      showAuditionLocationToTalen,
+      auditionLocation,
+      fromDate,
+      toDate,
+      listOfIndividualDates,
+      additionalAuditionNotes,
+      showWorkLocation,
+      workLocation,
+      workFromDate,
+      workToDate,
+      workIndividualDates,
+      workRequirements,
+      submissionDueBy,
+      submissionNotes,
+      askPhoto,
+      askVideo,
+      askAudio,
+    },
+  } = req;
+};
