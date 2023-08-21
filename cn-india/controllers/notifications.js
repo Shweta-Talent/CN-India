@@ -16,7 +16,7 @@ exports.notification = async (req, res) => {
     if (!project) throw Error("No such project exists");
 
     if (user.status === "blocked") return res.send("user is blocked");
-    if(user.status === "inactive") return res.send("user is inactive")
+    if (user.status === "inactive") return res.send("user is inactive");
     const name = user.firstName;
     if (notifyuser == null) {
       if (project && user) {
@@ -31,7 +31,7 @@ exports.notification = async (req, res) => {
       }
     }
     const projectname = project.projectName;
-   
+
     if (project.releaseToTalent === false) {
       if (notifyuser.count > 0) {
         const sendReminder = () => {
